@@ -1,0 +1,218 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Batches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(to right, #FF5733, #FFBD33, #28A745, #007BFF);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .important-box {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #FFD700;
+            color: black;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container, .subjects-container, .class9-container, .class10-container {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 200px);
+        }
+        .active {
+            display: flex;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            background-color: #007BFF;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            text-decoration: none;
+        }
+        .box:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 1rem;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .wait-box {
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            background: linear-gradient(to right, #FF5733, #FFBD33, #28A745, #007BFF);
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .wait-box:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .download-box-container {
+            display: none;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .download-box {
+            width: 200px;
+            height: 100px;
+            background-color: #28A745;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            text-decoration: none;
+        }
+        .download-box:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>RAJ-XNETWORK</header>
+    <div class="important-box">Important: Raj ke hote hue paise dene ki jarurat nahi hai!</div>
+    
+    <!-- Main Container -->
+    <div id="main-container" class="container active">
+        <div class="wait-box">Wait 2030 ðŸ˜¡</div>
+
+        <div class="box" onclick="showSubjects('class9New')">Class 9th New Batch</div>
+        <div class="box" onclick="showSubjects('class10New')">Class 10th New Batch</div>
+
+        <div class="download-box-container">
+            <a href="https://rolexcoderz.netlify.app/timetable-9th" target="_blank" class="download-box">Download 9th Timetable</a>
+            <a href="https://rolexcoderz.netlify.app/timetable-10th" target="_blank" class="download-box">Download 10th Timetable</a>
+        </div>
+    </div>
+
+    <!-- Class 9th Container -->
+    <div id="class9-container" class="class9-container">
+        <div id="subject-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 20px;">Class 9th New Batch Subjects</div>
+        
+        <!-- Class 9th Subject Links -->
+        <a href="https://rolexcoderz.netlify.app/hindi-9th/" target="_blank" class="box" id="hindi-box">Hindi</a>
+        <a href="https://rolexcoderz.netlify.app/eng-9th/" target="_blank" class="box" id="english-box">English</a>
+        <a href="https://rolexcoderz.netlify.app/maths-9th/" target="_blank" class="box" id="maths-box">Maths</a>
+        <a href="https://rolexcoderz.netlify.app/science-9th/" target="_blank" class="box" id="science-box">Science</a>
+        <a href="https://rolexcoderz.netlify.app/sst-9th/" target="_blank" class="box" id="sst-box">Social Science</a>
+        
+        <div class="box" onclick="showMain()">Back</div>
+    </div>
+
+    <!-- Class 10th Container -->
+    <div id="class10-container" class="class10-container">
+        <div id="subject-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 20px;">Class 10th New Batch Subjects</div>
+
+        <!-- Class 10th Subject Links -->
+        <a href="https://rolexcoderz.netlify.app/hindi/" target="_blank" class="box" id="hindi-box">Hindi</a>
+        <a href="https://rolexcoderz.netlify.app/eng/" target="_blank" class="box" id="english-box">English</a>
+        <a href="https://rolexcoderz.netlify.app/maths/" target="_blank" class="box" id="maths-box">Maths</a>
+        <a href="https://rolexcoderz.netlify.app/science/" target="_blank" class="box" id="science-box">Science</a>
+        <a href="https://rolexcoderz.netlify.app/sst/" target="_blank" class="box" id="sst-box">Social Science</a>
+
+        <div class="box" onclick="showMain()">Back</div>
+    </div>
+
+    <footer>
+        Contact us: <a href="https://t.me/cyber_raj1" target="_blank">@cyber_raj1</a>
+    </footer>
+
+    <script>
+        function showSubjects(batch) {
+            document.getElementById('main-container').classList.remove('active');
+            document.getElementById('class9-container').classList.remove('active');
+            document.getElementById('class10-container').classList.remove('active');
+            
+            if (batch === "class9New") {
+                document.getElementById('class9-container').classList.add('active');
+            }
+            
+            if (batch === "class10New") {
+                document.getElementById('class10-container').classList.add('active');
+            }
+        }
+
+        function showMain() {
+            document.getElementById('class9-container').classList.remove('active');
+            document.getElementById('class10-container').classList.remove('active');
+            document.getElementById('main-container').classList.add('active');
+        }
+    </script>
+</body>
+</html><script>// Original code
+function showSubjects(batch) {
+    document.getElementById('main-container').classList.remove('active');
+    document.getElementById('class9-container').classList.remove('active');
+    document.getElementById('class10-container').classList.remove('active');
+    
+    if (batch === "class9New") {
+        document.getElementById('class9-container').classList.add('active');
+    }
+    
+    if (batch === "class10New") {
+        document.getElementById('class10-container').classList.add('active');
+    }
+}
+
+// After Obfuscation
+var _0xabcde="active";function showSubjects(_0x12345){document.getElementById('main-container').classList.remove(_0xabcde);document.getElementById('class9-container').classList.remove(_0xabcde);document.getElementById('class10-container').classList.remove(_0xabcde);if(_0x12345==="class9New"){document.getElementById('class9-container').classList.add(_0xabcde);}if(_0x12345==="class10New"){document.getElementById('class10-container').classList.add(_0xabcde);}}</script>
